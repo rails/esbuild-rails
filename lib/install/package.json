@@ -1,0 +1,8 @@
+{
+  "name": "myapp",
+  "private": "true",
+  "scripts": {
+    "build": "esbuild app/javascript/application.js  --outfile=app/assets/esbuilds/application.js --bundle",
+    "watch": "npm run build -- --watch"
+  }
+}
