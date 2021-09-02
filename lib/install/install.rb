@@ -1,5 +1,6 @@
 say "Compile into app/assets/esbuilds"
-directory "#{__dir__}/esbuilds", "app/assets/esbuilds"
+empty_directory "app/assets/esbuilds"
+keep_file "app/assets/esbuilds"
 append_to_file "app/assets/config/manifest.js", %(//= link_tree ../esbuilds .js\n)
 
 if Rails.root.join(".gitignore").exist?
