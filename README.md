@@ -13,6 +13,8 @@ You can tailor the configuration of esbuild through the build script in `package
 
 ## Installation
 
+You must already have node and npm installed on your system. Then:
+
 1. Add `esbuild-rails` to your Gemfile with `gem 'esbuild-rails'`
 2. Run `./bin/bundle install`
 3. Run `./bin/rails esbuild:install`
