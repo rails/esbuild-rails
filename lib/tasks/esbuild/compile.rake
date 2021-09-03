@@ -1,7 +1,7 @@
 namespace :esbuild do
-  desc "Compile using esbuild with npm run build"
+  desc "Compile using esbuild with yarn build"
   task :compile do
-    system "npm install && npm run build"
+    system "yarn install && yarn build"
   end
 end
 
