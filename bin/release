@@ -11,3 +11,4 @@ git tag v$VERSION
 git push --tags
 gem build esbuild-rails.gemspec
 gem push "esbuild-rails-$VERSION.gem" --host https://rubygems.org
+rm "esbuild-rails-$VERSION.gem"
