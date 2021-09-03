@@ -19,6 +19,8 @@ You must already have node and yarn installed on your system. Then:
 2. Run `./bin/bundle install`
 3. Run `./bin/rails esbuild:install`
 
+Or, in Rails 7+, you can preconfigure your new application to use esbuild with `rails new myapp -j esbuild`.
+
 
 ## License
 
