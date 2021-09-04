@@ -2,6 +2,6 @@
   "name": "myapp",
   "private": "true",
   "scripts": {
-    "build": "esbuild app/javascript/application.js  --outfile=app/assets/esbuilds/application.js --bundle"
+    "build": "esbuild app/javascript/application.js  --outfile=app/assets/builds/application.js --bundle"
   }
 }

@@ -1,10 +1,10 @@
-say "Compile into app/assets/esbuilds"
-empty_directory "app/assets/esbuilds"
-keep_file "app/assets/esbuilds"
-append_to_file "app/assets/config/manifest.js", %(//= link_tree ../esbuilds .js\n)
+say "Compile into app/assets/builds"
+empty_directory "app/assets/builds"
+keep_file "app/assets/builds"
+append_to_file "app/assets/config/manifest.js", %(//= link_tree ../builds .js\n)
 
 if Rails.root.join(".gitignore").exist?
-  append_to_file ".gitignore", %(\n/app/assets/esbuilds\n)
+  append_to_file ".gitignore", %(\n/app/assets/builds\n)
 end
 
 if (app_layout_path = Rails.root.join("app/views/layouts/application.html.erb")).exist?
