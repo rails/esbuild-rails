@@ -9,10 +9,8 @@ end
 
 if (app_layout_path = Rails.root.join("app/views/layouts/application.html.erb")).exist?
   say "Add esbuild include tag in application layout"
-  insert_into_file app_layout_path.to_s, before: /\s*<\/head>/ do <<-HTML
-\n    <%= javascript_include_tag "application", "data-track-turbo": "true", defer: true %>
-HTML
-  end
+  insert_into_file app_layout_path.to_s, 
+    %(\n    <%= javascript_include_tag "application", "data-track-turbo": "true", defer: true %>), before: /\s*<\/head>/
 else
   say "Default application.html.erb is missing!", :red
   say %(        Add <%= javascript_include_tag "application", "data-track-turbo": "true", defer: true %> within the <head> tag in your custom layout.)
