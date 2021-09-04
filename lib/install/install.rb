@@ -9,7 +9,7 @@ end
 
 if (app_layout_path = Rails.root.join("app/views/layouts/application.html.erb")).exist?
   say "Add esbuild include tag in application layout"
-  insert_into_file app_layout_path.to_s, 
+  insert_into_file app_layout_path.to_s,
     %(\n    <%= javascript_include_tag "application", "data-track-turbo": "true", defer: true %>), before: /\s*<\/head>/
 else
   say "Default application.html.erb is missing!", :red
@@ -23,5 +23,6 @@ unless (app_js_entrypoint_path = Rails.root.join("app/javascript/application.js"
 end
 
 say "Create default package.json and install esbuild"
+copy_file "#{__dir__}/esbuild.js", Rails.root.join("app/assets/config/esbuild.js")
 copy_file "#{__dir__}/package.json", "package.json"
 run "yarn add esbuild"
