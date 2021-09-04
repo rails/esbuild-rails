@@ -22,6 +22,11 @@ You must already have node and yarn installed on your system. Then:
 Or, in Rails 7+, you can preconfigure your new application to use esbuild with `rails new myapp -j esbuild`.
 
 
+## The sister gem to rollupjs-rails
+
+This gem is almost identical in setup and purpose as [`rollupjs-rails`](https://github.com/rails/rollupjs-rails), which follows the same conventions, but uses [rollup.js](https://rollupjs.org) instead.
+
+
 ## License
 
 esbuild for Rails is released under the [MIT License](https://opensource.org/licenses/MIT).
