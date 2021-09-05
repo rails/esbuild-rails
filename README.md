@@ -6,6 +6,8 @@ You develop using this approach by running esbuild in watch mode in a terminal w
 
 When you deploy your application to production, esbuild attaches to the `assets:precompile` task to ensure that all your package dependencies from `package.json` have been installed via npm, and then runs `yarn build` to process all the entry points, as it would in development. The latter files are then picked up by the asset pipeline, digested, and copied into public/assets, as any other asset pipeline file.
 
+This also happens in testing where esbuild attaches to the `test:prepare` task to ensure the JavaScript has been compiled before testing commences. (Note that this currently only applies to rails `test:*` tasks (like `test:all` or `test:controllers`), not "rails test", as that doesn't load `test:prepare`).
+
 That's it!
 
 You can tailor the configuration of esbuild through the build script in `package.json`. Or if you want to get fancy with plugins, you can setup an [external configuration](https://esbuild.github.io/getting-started/#build-scripts) to run through node.

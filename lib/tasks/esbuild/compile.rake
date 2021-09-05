@@ -6,3 +6,4 @@ namespace :esbuild do
 end
 
 Rake::Task["assets:precompile"].enhance(["esbuild:compile"])
+Rake::Task["test:prepare"].enhance(["esbuild:compile"])
